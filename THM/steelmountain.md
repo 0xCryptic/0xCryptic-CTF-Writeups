@@ -101,8 +101,6 @@ Logged On Users : 1
 Meterpreter     : x86/windows
 ```
 
-`cd ../../../../../../`
-
 User flag obtained. 
 
 # PrivEsc
