@@ -2,7 +2,9 @@
 
 IP = 10.49.154.44
 
-Employee => Bill Harper 
+Q: Who is the employee of the month?
+A: `Bill Harper` 
+
 Source code: 
 ```
 <h3>Employee of the month</h3>
