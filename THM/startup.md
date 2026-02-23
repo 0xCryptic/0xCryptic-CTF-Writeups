@@ -24,7 +24,7 @@ Abuse traditional vulnerabilities via untraditional means.
 
 ```
 
-# Improper Authentication
+## Improper Authentication
 
 `ftp anonymous@10.80.171.70 21` 
 
@@ -39,7 +39,7 @@ Two files are available for download, which can be retrieved by running: `get im
 
 A web site is available via the HTTP protocol on port 80. Upon accessing the web server, a message is displayed by the Dev Team: "No spice here! Please excuse us as we develop our site. We want to make it the most stylish and convienient way to buy peppers. Plus, we need a web developer. BTW if you're a web developer, contact us. Otherwise, don't you worry. We'll be online shortly! — Dev Team"
 
-# File and Directory Enumeration with Gobuster
+## File and Directory Enumeration with Gobuster
 
 `gobuster dir -u http://10.80.171.70 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt` 
 
@@ -47,7 +47,7 @@ A web site is available via the HTTP protocol on port 80. Upon accessing the web
 files                (Status: 301) [Size: 312] [--> http://10.80.181.70/files/]
 ```
 
-# Initial Access 
+## Initial Access 
 - A `/files` directory has been found where the FTP files are stored. Uploading a php reverse shell via ftp to the writeable ftp directory was succesful and the reverse shell was executed.
 - Recipe.txt found: The secret spicy soup recipe is `love`
 - Packet capture (.pcapng) file found within `incidents` directory. 
@@ -55,7 +55,7 @@ files                (Status: 301) [Size: 312] [--> http://10.80.181.70/files/]
 - Found credentials for user `lennie` inside .pcapng file and switched to user. 
 - User flag obtained. 
 
-# Privilege Escalation
+## Privilege Escalation
 
 - There's a `scripts` directory containing a `planner.sh` bash script file that contains the following code: 
 
