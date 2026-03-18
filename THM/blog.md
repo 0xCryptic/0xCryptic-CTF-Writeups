@@ -166,7 +166,7 @@ The Metasploit Framework can be used to exploit Wordpress.
 
 `-rwsr-sr-x 1 root root 8.3K May 26  2020 /usr/sbin/checker (Unknown SGID binary)`
 
-By running this binary and reading the human-readable output of this binary by running `strings /usr/sbin/checker`, it's an Lef binary compiled with gcc that imports `getenv`, `setuid`, `system` and `puts` that checks if the `admin` environment variable is set to true. If it is, it sets the UID and spawns a bash shell. If not, it puts "Not an Admin" as output. 
+By running this binary and reading the human-readable output of this binary by running `strings /usr/sbin/checker`, it's an ELF binary compiled with gcc that imports `getenv`, `setuid`, `system` and `puts` that checks if the `admin` environment variable is set to true. If it is, it sets the UID and spawns a bash shell. If not, it puts "Not an Admin" as output. 
 
 - By running `export admin=true`, we can set the admin environment variable to true, run the binary and escalate privileges. Root flag has been obtained. 
 
