@@ -87,7 +87,7 @@ Note: All requests to this endpoint are sent in JSON format.
 - User flag obtained. 
 
 
-# Privilege Escalation 
+## Privilege Escalation 
 - Performed user enumeration, which reveals the `rabbitmq` user for the RabbitMQ service on port 25672 with files stored at the path `/var/lib/rabbitmq`. 
 - The Erlang cookie is stored in `/var/lib/rabbitmq/.erlang.cookie`. 
 - RabbitMQ can be installed on the local machine with the command: `sudo apt install rabbitmq-server`. `forge` is then added to the /etc/hosts file for access
